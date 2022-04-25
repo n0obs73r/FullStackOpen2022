@@ -7,13 +7,11 @@ function Part(content) {
 }
 
 function Content(content) {
-    return (
-        <div>
-        <Part part={content.parts[0].name} exercises={content.parts[0].exercises}/>
-        <Part part={content.parts[1].name} exercises={content.parts[1].exercises}/>
-        <Part part={content.parts[2].name} exercises={content.parts[2].exercises}/>
-        </div>
-    );
+    return [
+        <Part key={"part1"} part={content.parts[0].name} exercises={content.parts[0].exercises}/>,
+        <Part key={"part2"} part={content.parts[1].name} exercises={content.parts[1].exercises}/>,
+        <Part key={"part3"} part={content.parts[2].name} exercises={content.parts[2].exercises}/>
+        ];
 }
 
 function Total(total) {
